@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="clicked">#045FB4</color>
+    <color name="blue">#fff</color>
+    <color name="red">#fff</color>
+    <color name="green">#9F2200</color>
+    <color name="black">#fff</color>
+    <color name="rose_fonce">#9F2200</color>
+        <color name="darkorange" >#FFFF8800</color>
+        <color name="orange" >#FFFFBB33</color>
+</resources>

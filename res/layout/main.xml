@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".BluetoothChat" >
+
+    <ListView
+        android:id="@+id/in"
+        android:layout_width="299dp"
+        android:layout_height="12dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll" />
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:max="2" />
+
+    <LinearLayout
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="LOW                   MEDIUM               HIGH"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"  >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <Switch
+                    android:id="@+id/switch2"
+                    android:layout_width="170dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="45dp"
+                    android:layout_weight="1.23"
+                    android:checked="false"
+                    android:textColorLink="@color/darkorange"
+                    android:textOff="@string/forward"
+                    android:textOn="@string/forward" />
+
+            </LinearLayout>
+
+            <ToggleButton
+                android:id="@+id/toggleButton1"
+                android:layout_width="76dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/selector1"
+                android:maxWidth="80dp"
+                android:minHeight="80dp"
+                android:text="@string/togglebutton"
+                android:textOff="@string/stop"
+                android:textOn="@string/stop" />
+
+        </LinearLayout>
+
+      
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="170dp"
+            android:layout_height="5dp"
+            android:textOff="@string/Reverse"
+            android:textOn="@string/Reverse" />
+
+        <view
+            android:id="@+id/mycompass1"
+            android:layout_width="228dp"
+            android:layout_height="314dp"
+            android:layout_marginLeft="30dp"
+            class="com.example.android.BluetoothChat.Compass" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <ImageButton
+				android:id="@+id/play_pause"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:adjustViewBounds="true"
+				
+				android:contentDescription="@string/play_pause"
+				android:scaleType="centerInside"
+				android:src="@drawable/play"
+				android:padding="5dip" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="95dp"
+            android:text="forward"
+            android:visibility="invisible"
+            android:width="110dp"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Left"
+                android:visibility="invisible"
+                android:width="100dp"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/button61"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Stop"
+                android:visibility="invisible"
+                tools:ignore="HardcodedText,ButtonStyle" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="0dp"
+                android:text="Right"
+                android:visibility="invisible"
+                android:width="100dp"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="95dp"
+        android:text="Backward"
+        android:visibility="invisible"
+        android:width="100dp"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:id="@+id/xval"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:id="@+id/yval"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/zval"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/edit_text_out"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:visibility="invisible" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/button_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/send"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
